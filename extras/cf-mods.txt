@@ -1,0 +1,114 @@
+
+# Mekanism series
+https://www.curseforge.com/minecraft/mc-mods/mekanism
+https://www.curseforge.com/minecraft/mc-mods/mekanism-additions
+https://www.curseforge.com/minecraft/mc-mods/mekanism-generators
+https://www.curseforge.com/minecraft/mc-mods/mekanism-tools
+https://www.curseforge.com/minecraft/mc-mods/mekanism-weapons
+https://www.curseforge.com/minecraft/mc-mods/mekanism-enchantable-mekasuit
+https://www.curseforge.com/minecraft/mc-mods/mekanism-extras
+https://www.curseforge.com/minecraft/mc-mods/mekanism-upgrades-reborn
+https://www.curseforge.com/minecraft/mc-mods/mekanism-curios
+
+# Industrial mods
+https://www.curseforge.com/minecraft/mc-mods/applied-energistics-2
+https://www.curseforge.com/minecraft/mc-mods/immersive-engineering
+
+# Forge-Fabric connector
+https://www.curseforge.com/minecraft/mc-mods/forgified-fabric-api
+https://www.curseforge.com/minecraft/mc-mods/sinytra-connector
+https://www.curseforge.com/minecraft/mc-mods/connector-extras
+
+# Main APIs and dependencies
+https://www.curseforge.com/minecraft/mc-mods/botarium
+https://www.curseforge.com/minecraft/mc-mods/resourceful-config
+https://www.curseforge.com/minecraft/mc-mods/resourceful-lib
+https://www.curseforge.com/minecraft/mc-mods/obscure-api
+https://www.curseforge.com/minecraft/mc-mods/glitchcore
+https://www.curseforge.com/minecraft/mc-mods/lithostitched
+https://www.curseforge.com/minecraft/mc-mods/guideme
+https://www.curseforge.com/minecraft/mc-mods/citadel
+https://www.curseforge.com/minecraft/mc-mods/cristel-lib
+https://www.curseforge.com/minecraft/mc-mods/structure-essentials-forge-fabric
+https://www.curseforge.com/minecraft/mc-mods/cupboard
+https://www.curseforge.com/minecraft/mc-mods/patchouli
+https://www.curseforge.com/minecraft/mc-mods/curios
+https://www.curseforge.com/minecraft/mc-mods/lionfish-api
+https://www.curseforge.com/minecraft/mc-mods/zeta
+https://www.curseforge.com/minecraft/mc-mods/framework
+https://www.curseforge.com/minecraft/mc-mods/creativecore
+https://www.curseforge.com/minecraft/mc-mods/multi-piston
+https://www.curseforge.com/minecraft/mc-mods/towntalk
+https://www.curseforge.com/minecraft/mc-mods/blockui
+https://www.curseforge.com/minecraft/mc-mods/domum-ornamentum
+https://www.curseforge.com/minecraft/mc-mods/structurize
+https://www.curseforge.com/minecraft/mc-mods/ferritecore
+https://www.curseforge.com/minecraft/mc-mods/puzzles-lib
+# https://www.curseforge.com/minecraft/mc-mods/forge-config-api-port-fabric
+https://www.curseforge.com/minecraft/mc-mods/coroutil
+https://www.curseforge.com/minecraft/mc-mods/blueprint
+
+# Landscape enchancement mods
+https://www.curseforge.com/minecraft/mc-mods/terralith
+https://www.curseforge.com/minecraft/mc-mods/tectonic
+https://www.curseforge.com/minecraft/mc-mods/biomes-o-plenty
+https://www.curseforge.com/minecraft/mc-mods/the-twilight-forest
+https://www.curseforge.com/minecraft/mc-mods/terrablender
+https://www.curseforge.com/minecraft/mc-mods/deeperdarker
+https://www.curseforge.com/minecraft/mc-mods/amplified-nether
+https://www.curseforge.com/minecraft/mc-mods/incendium
+https://www.curseforge.com/minecraft/mc-mods/endergetic
+https://www.curseforge.com/minecraft/mc-mods/nullscape
+
+# Yung's mods (terrain and structues)
+https://www.curseforge.com/minecraft/mc-mods/yungs-api
+https://www.curseforge.com/minecraft/mc-mods/yungs-better-strongholds
+https://www.curseforge.com/minecraft/mc-mods/yungs-better-dungeons
+https://www.curseforge.com/minecraft/mc-mods/yungs-better-caves
+https://www.curseforge.com/minecraft/mc-mods/yungs-better-mineshafts-forge
+https://www.curseforge.com/minecraft/mc-mods/yungs-extras
+https://www.curseforge.com/minecraft/mc-mods/yungs-bridges
+
+# Space
+https://www.curseforge.com/minecraft/mc-mods/ad-astra
+
+# Different structures and dungeons
+https://www.curseforge.com/minecraft/mc-mods/ob-aquamirae
+https://www.curseforge.com/minecraft/mc-mods/dungeon-and-taverns
+https://www.curseforge.com/minecraft/mc-mods/towns-and-towers
+https://www.curseforge.com/minecraft/mc-mods/lendercataclysm
+
+# QoL and misc mods
+https://www.curseforge.com/minecraft/mc-mods/treechop
+https://www.curseforge.com/minecraft/mc-mods/itemphysic
+https://www.curseforge.com/minecraft/mc-mods/lootr
+https://www.curseforge.com/minecraft/mc-mods/jei
+https://www.curseforge.com/minecraft/mc-mods/pick-up-notifier
+
+# Sophisticated mods series (storages and backpacks)
+https://www.curseforge.com/minecraft/mc-mods/sophisticated-core
+https://www.curseforge.com/minecraft/mc-mods/sophisticated-storage
+https://www.curseforge.com/minecraft/mc-mods/sophisticated-backpacks
+
+# Create mods
+https://www.curseforge.com/minecraft/mc-mods/create
+https://www.curseforge.com/minecraft/mc-mods/create-steam-n-rails
+
+# Smaller content mods
+https://www.curseforge.com/minecraft/mc-mods/forestry-community-edition
+https://www.curseforge.com/minecraft/mc-mods/friends-and-foes-forge
+https://www.curseforge.com/minecraft/mc-mods/rats
+https://www.curseforge.com/minecraft/mc-mods/minecolonies
+https://www.curseforge.com/minecraft/mc-mods/quark
+https://www.curseforge.com/minecraft/mc-mods/refurbished-furniture
+
+# Visual mods
+https://www.curseforge.com/minecraft/mc-mods/visual-workbench
+https://www.curseforge.com/minecraft/mc-mods/what-are-they-up-to
+
+# Xaero's map
+https://www.curseforge.com/minecraft/mc-mods/xaeros-minimap
+https://www.curseforge.com/minecraft/mc-mods/xaeros-world-map
+
+# Performance enchancement
+https://www.curseforge.com/minecraft/mc-mods/modernfix
