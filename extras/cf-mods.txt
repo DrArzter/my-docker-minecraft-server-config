@@ -12,6 +12,9 @@ https://www.curseforge.com/minecraft/mc-mods/mekanism-curios
 
 # Industrial mods
 https://www.curseforge.com/minecraft/mc-mods/applied-energistics-2
+https://www.curseforge.com/minecraft/mc-mods/ex-pattern-provider
+https://www.curseforge.com/minecraft/mc-mods/refined-storage
+https://www.curseforge.com/minecraft/mc-mods/extrastorage
 https://www.curseforge.com/minecraft/mc-mods/immersive-engineering
 
 # Forge-Fabric connector
@@ -44,9 +47,10 @@ https://www.curseforge.com/minecraft/mc-mods/domum-ornamentum
 https://www.curseforge.com/minecraft/mc-mods/structurize
 https://www.curseforge.com/minecraft/mc-mods/ferritecore
 https://www.curseforge.com/minecraft/mc-mods/puzzles-lib
-# https://www.curseforge.com/minecraft/mc-mods/forge-config-api-port-fabric
 https://www.curseforge.com/minecraft/mc-mods/coroutil
 https://www.curseforge.com/minecraft/mc-mods/blueprint
+https://www.curseforge.com/minecraft/mc-mods/glodium
+https://www.curseforge.com/minecraft/mc-mods/edivadlib
 
 # Landscape enchancement mods
 https://www.curseforge.com/minecraft/mc-mods/terralith
@@ -73,7 +77,7 @@ https://www.curseforge.com/minecraft/mc-mods/yungs-bridges
 https://www.curseforge.com/minecraft/mc-mods/ad-astra
 
 # Different structures and dungeons
-https://www.curseforge.com/minecraft/mc-mods/ob-aquamirae
+https://www.curseforge.com/minecraft/mc-mods/aquamirae
 https://www.curseforge.com/minecraft/mc-mods/dungeon-and-taverns
 https://www.curseforge.com/minecraft/mc-mods/towns-and-towers
 https://www.curseforge.com/minecraft/mc-mods/lendercataclysm
@@ -84,6 +88,9 @@ https://www.curseforge.com/minecraft/mc-mods/itemphysic
 https://www.curseforge.com/minecraft/mc-mods/lootr
 https://www.curseforge.com/minecraft/mc-mods/jei
 https://www.curseforge.com/minecraft/mc-mods/pick-up-notifier
+https://www.curseforge.com/minecraft/mc-mods/appleskin
+https://www.curseforge.com/minecraft/mc-mods/domestication-innovation
+https://www.curseforge.com/minecraft/mc-mods/carry-on
 
 # Sophisticated mods series (storages and backpacks)
 https://www.curseforge.com/minecraft/mc-mods/sophisticated-core
@@ -93,6 +100,7 @@ https://www.curseforge.com/minecraft/mc-mods/sophisticated-backpacks
 # Create mods
 https://www.curseforge.com/minecraft/mc-mods/create
 https://www.curseforge.com/minecraft/mc-mods/create-steam-n-rails
+https://www.curseforge.com/minecraft/mc-mods/create-stock-bridge
 
 # Smaller content mods
 https://www.curseforge.com/minecraft/mc-mods/forestry-community-edition
@@ -101,10 +109,14 @@ https://www.curseforge.com/minecraft/mc-mods/rats
 https://www.curseforge.com/minecraft/mc-mods/minecolonies
 https://www.curseforge.com/minecraft/mc-mods/quark
 https://www.curseforge.com/minecraft/mc-mods/refurbished-furniture
+https://www.curseforge.com/minecraft/mc-mods/botania
 
 # Visual mods
 https://www.curseforge.com/minecraft/mc-mods/visual-workbench
 https://www.curseforge.com/minecraft/mc-mods/what-are-they-up-to
+
+# Weapons
+https://www.curseforge.com/minecraft/mc-mods/timeless-and-classics-zero
 
 # Xaero's map
 https://www.curseforge.com/minecraft/mc-mods/xaeros-minimap
@@ -112,3 +124,6 @@ https://www.curseforge.com/minecraft/mc-mods/xaeros-world-map
 
 # Performance enchancement
 https://www.curseforge.com/minecraft/mc-mods/modernfix
+
+# Plugins
+https://www.curseforge.com/minecraft/mc-mods/luckperms

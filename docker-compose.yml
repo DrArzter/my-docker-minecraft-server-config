@@ -8,14 +8,17 @@ services:
     environment:
       CF_API_KEY: ${CF_API_KEY}
       EULA: "TRUE"
-      TYPE: "MOHIST"
+      TYPE: "FORGE"
       VERSION: "1.20.1"
       MEMORY: "4096M"
+      DIFFICULTY: "2"
       ONLINE_MODE: "false"
       USE_MEOWICE_FLAGS: "true"
-      TZ: "Europe/Warsaw" 
-      CURSEFORGE_FILES: "@/extras/cf-mods.txt"
+      TZ: "Europe/Warsaw"
+      CURSEFORGE_FILES: |-
+        @/extras/cf-mods.txt
+    restart: always
     volumes:
-      - ./data:/data
-      - ./mods:/data/mods
-      - ./extras:/extras
+      - "./data:/data"
+      - "./mods:/data/mods"
+      - "./extras:/extras"
