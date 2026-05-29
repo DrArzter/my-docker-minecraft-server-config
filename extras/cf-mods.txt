@@ -75,6 +75,7 @@ https://www.curseforge.com/minecraft/mc-mods/yungs-bridges
 
 # Space
 https://www.curseforge.com/minecraft/mc-mods/ad-astra
+https://www.curseforge.com/minecraft/mc-mods/ad-astra-more-structures
 
 # Different structures and dungeons
 https://www.curseforge.com/minecraft/mc-mods/aquamirae
