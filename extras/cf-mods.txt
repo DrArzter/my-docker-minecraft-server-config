@@ -91,6 +91,7 @@ https://www.curseforge.com/minecraft/mc-mods/pick-up-notifier
 https://www.curseforge.com/minecraft/mc-mods/appleskin
 https://www.curseforge.com/minecraft/mc-mods/domestication-innovation
 https://www.curseforge.com/minecraft/mc-mods/carry-on
+https://www.curseforge.com/minecraft/mc-mods/polymorph
 
 # Sophisticated mods series (storages and backpacks)
 https://www.curseforge.com/minecraft/mc-mods/sophisticated-core
