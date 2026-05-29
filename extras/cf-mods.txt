@@ -6,6 +6,7 @@ https://www.curseforge.com/minecraft/mc-mods/mekanism-generators
 https://www.curseforge.com/minecraft/mc-mods/mekanism-tools
 https://www.curseforge.com/minecraft/mc-mods/mekanism-weapons
 https://www.curseforge.com/minecraft/mc-mods/mekanism-enchantable-mekasuit
+https://www.curseforge.com/minecraft/mc-mods/mekanism-enchantable
 https://www.curseforge.com/minecraft/mc-mods/mekanism-extras
 https://www.curseforge.com/minecraft/mc-mods/mekanism-upgrades-reborn
 https://www.curseforge.com/minecraft/mc-mods/mekanism-curios
