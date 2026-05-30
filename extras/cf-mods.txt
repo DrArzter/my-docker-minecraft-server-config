@@ -54,6 +54,7 @@ https://www.curseforge.com/minecraft/mc-mods/glodium
 https://www.curseforge.com/minecraft/mc-mods/edivadlib
 https://www.curseforge.com/minecraft/mc-mods/titanium
 https://www.curseforge.com/minecraft/mc-mods/caelus
+https://www.curseforge.com/minecraft/mc-mods/prickle
 
 # Landscape enchancement mods
 https://www.curseforge.com/minecraft/mc-mods/terralith
