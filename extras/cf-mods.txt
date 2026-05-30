@@ -53,6 +53,7 @@ https://www.curseforge.com/minecraft/mc-mods/blueprint
 https://www.curseforge.com/minecraft/mc-mods/glodium
 https://www.curseforge.com/minecraft/mc-mods/edivadlib
 https://www.curseforge.com/minecraft/mc-mods/titanium
+https://www.curseforge.com/minecraft/mc-mods/caelus
 
 # Landscape enchancement mods
 https://www.curseforge.com/minecraft/mc-mods/terralith
