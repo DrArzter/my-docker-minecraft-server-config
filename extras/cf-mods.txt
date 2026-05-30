@@ -17,6 +17,7 @@ https://www.curseforge.com/minecraft/mc-mods/ex-pattern-provider
 https://www.curseforge.com/minecraft/mc-mods/refined-storage
 https://www.curseforge.com/minecraft/mc-mods/extrastorage
 https://www.curseforge.com/minecraft/mc-mods/immersive-engineering
+https://www.curseforge.com/minecraft/mc-mods/industrial-foregoing
 
 # Forge-Fabric connector
 https://www.curseforge.com/minecraft/mc-mods/forgified-fabric-api
