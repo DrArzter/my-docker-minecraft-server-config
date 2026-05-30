@@ -95,6 +95,7 @@ https://www.curseforge.com/minecraft/mc-mods/domestication-innovation-fixed
 https://www.curseforge.com/minecraft/mc-mods/carry-on
 https://www.curseforge.com/minecraft/mc-mods/polymorph
 https://www.curseforge.com/minecraft/mc-mods/elytra-slot
+https://www.curseforge.com/minecraft/mc-mods/enchantment-descriptions
 
 # Sophisticated mods series (storages and backpacks)
 https://www.curseforge.com/minecraft/mc-mods/sophisticated-core
