@@ -1,4 +1,3 @@
-
 # Mekanism series
 https://www.curseforge.com/minecraft/mc-mods/mekanism
 https://www.curseforge.com/minecraft/mc-mods/mekanism-additions
@@ -93,6 +92,7 @@ https://www.curseforge.com/minecraft/mc-mods/appleskin
 https://www.curseforge.com/minecraft/mc-mods/domestication-innovation
 https://www.curseforge.com/minecraft/mc-mods/carry-on
 https://www.curseforge.com/minecraft/mc-mods/polymorph
+https://www.curseforge.com/minecraft/mc-mods/elytra-slot
 
 # Sophisticated mods series (storages and backpacks)
 https://www.curseforge.com/minecraft/mc-mods/sophisticated-core
