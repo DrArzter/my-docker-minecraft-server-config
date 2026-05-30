@@ -85,7 +85,6 @@ https://www.curseforge.com/minecraft/mc-mods/lendercataclysm
 
 # QoL and misc mods
 https://www.curseforge.com/minecraft/mc-mods/treechop
-https://www.curseforge.com/minecraft/mc-mods/itemphysic
 https://www.curseforge.com/minecraft/mc-mods/lootr
 https://www.curseforge.com/minecraft/mc-mods/jei
 https://www.curseforge.com/minecraft/mc-mods/pick-up-notifier
