@@ -60,7 +60,6 @@ https://www.curseforge.com/minecraft/mc-mods/biomes-o-plenty
 https://www.curseforge.com/minecraft/mc-mods/the-twilight-forest
 https://www.curseforge.com/minecraft/mc-mods/terrablender
 https://www.curseforge.com/minecraft/mc-mods/deeperdarker
-https://www.curseforge.com/minecraft/mc-mods/amplified-nether
 https://www.curseforge.com/minecraft/mc-mods/incendium
 https://www.curseforge.com/minecraft/mc-mods/endergetic
 https://www.curseforge.com/minecraft/mc-mods/nullscape
