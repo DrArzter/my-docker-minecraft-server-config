@@ -18,6 +18,7 @@ https://www.curseforge.com/minecraft/mc-mods/extrastorage
 https://www.curseforge.com/minecraft/mc-mods/immersive-engineering
 https://www.curseforge.com/minecraft/mc-mods/industrial-foregoing
 https://www.curseforge.com/minecraft/mc-mods/powah-rearchitected
+https://www.curseforge.com/minecraft/mc-mods/industrial-upgrade
 
 # Forge-Fabric connector
 https://www.curseforge.com/minecraft/mc-mods/forgified-fabric-api
