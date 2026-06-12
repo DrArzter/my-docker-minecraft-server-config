@@ -19,6 +19,12 @@ https://www.curseforge.com/minecraft/mc-mods/immersive-engineering
 https://www.curseforge.com/minecraft/mc-mods/industrial-foregoing
 https://www.curseforge.com/minecraft/mc-mods/powah-rearchitected
 https://www.curseforge.com/minecraft/mc-mods/industrial-upgrade
+https://www.curseforge.com/minecraft/mc-mods/iu-watering-can
+https://www.curseforge.com/minecraft/mc-mods/quantum-generators
+https://www.curseforge.com/minecraft/mc-mods/iu-diamond-vein
+https://www.curseforge.com/minecraft/mc-mods/reactor-plus
+https://www.curseforge.com/minecraft/mc-mods/power-utilities-iu
+https://www.curseforge.com/minecraft/mc-mods/simply-quarries
 
 # Forge-Fabric connector
 https://www.curseforge.com/minecraft/mc-mods/forgified-fabric-api
