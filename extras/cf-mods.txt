@@ -122,6 +122,7 @@ https://www.curseforge.com/minecraft/mc-mods/minecolonies
 https://www.curseforge.com/minecraft/mc-mods/quark
 https://www.curseforge.com/minecraft/mc-mods/refurbished-furniture
 https://www.curseforge.com/minecraft/mc-mods/botania
+https://www.curseforge.com/minecraft/mc-mods/touhou-little-maid
 
 # Visual mods
 https://www.curseforge.com/minecraft/mc-mods/visual-workbench
