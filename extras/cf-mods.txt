@@ -109,6 +109,7 @@ https://www.curseforge.com/minecraft/mc-mods/elytra-slot
 https://www.curseforge.com/minecraft/mc-mods/enchantment-descriptions
 https://www.curseforge.com/minecraft/mc-mods/ato
 https://www.curseforge.com/minecraft/mc-mods/connectivity
+https://www.curseforge.com/minecraft/mc-mods/do-a-barrel-roll
 
 # Sophisticated mods series (storages and backpacks)
 https://www.curseforge.com/minecraft/mc-mods/sophisticated-core
