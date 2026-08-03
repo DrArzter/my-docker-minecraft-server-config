@@ -58,6 +58,8 @@ https://www.curseforge.com/minecraft/mc-mods/caelus
 https://www.curseforge.com/minecraft/mc-mods/bookshelf
 https://www.curseforge.com/minecraft/mc-mods/cloth-config
 https://www.curseforge.com/minecraft/mc-mods/architectury-api
+https://www.curseforge.com/minecraft/mc-mods/fragmentum
+https://www.curseforge.com/minecraft/mc-mods/geckolib
 
 # Landscape enchancement mods
 https://www.curseforge.com/minecraft/mc-mods/terralith
