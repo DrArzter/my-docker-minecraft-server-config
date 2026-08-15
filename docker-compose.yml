@@ -21,4 +21,5 @@ services:
     volumes:
       - "./data:/data"
       - "./mods:/data/mods"
-      - "./extras:/extras"
+      # Compatibility entry point: the canonical list now belongs to the main profile.
+      - "./profiles/main/extras:/extras:ro"

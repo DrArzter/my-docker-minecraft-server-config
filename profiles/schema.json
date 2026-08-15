@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://spawnpoint.local/schemas/minecraft-profile-v1.json",
+  "title": "Minecraft server profile",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "id",
+    "display_name",
+    "gameplay",
+    "minecraft_version",
+    "loader",
+    "compose_file",
+    "mods"
+  ],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]{0,31}$" },
+    "display_name": { "type": "string", "minLength": 1, "maxLength": 80 },
+    "gameplay": { "enum": ["modded", "vanilla-like"] },
+    "minecraft_version": { "type": "string", "minLength": 1 },
+    "loader": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "version"],
+      "properties": {
+        "type": { "enum": ["vanilla", "forge", "neoforge", "fabric", "quilt"] },
+        "version": { "type": ["string", "null"] }
+      }
+    },
+    "compose_file": { "const": "compose.yaml" },
+    "mods": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source"],
+      "properties": {
+        "source": { "type": ["string", "null"] }
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "../schema.json",
+  "schema_version": 1,
+  "id": "vanilla-forge",
+  "display_name": "Vanilla gameplay on Forge 1.20.1",
+  "gameplay": "vanilla-like",
+  "minecraft_version": "1.20.1",
+  "loader": {
+    "type": "forge",
+    "version": "47.4.10"
+  },
+  "compose_file": "compose.yaml",
+  "mods": {
+    "source": null
+  }
+}

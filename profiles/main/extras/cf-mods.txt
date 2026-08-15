@@ -1,3 +1,5 @@
+# Source mod list for the main profile. Runtime JARs do not belong in Git.
+
 # Mekanism series
 https://www.curseforge.com/minecraft/mc-mods/mekanism
 https://www.curseforge.com/minecraft/mc-mods/mekanism-additions

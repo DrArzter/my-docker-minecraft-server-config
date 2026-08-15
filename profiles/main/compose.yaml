@@ -1,0 +1,28 @@
+services:
+  mc:
+    image: itzg/minecraft-server@sha256:7423a4cf59ec510a58294f853fc7b07cdf0a50c5bc4618ee172327d7913941eb
+    tty: true
+    stdin_open: true
+    ports:
+      - "25565:25565"
+    environment:
+      CF_API_KEY: ${CF_API_KEY:?set CF_API_KEY in .env}
+      EULA: "TRUE"
+      TYPE: "FORGE"
+      VERSION: "1.20.1"
+      FORGE_VERSION: "47.4.10"
+      MEMORY: "4096M"
+      DIFFICULTY: "2"
+      ONLINE_MODE: "false"
+      USE_MEOWICE_FLAGS: "true"
+      TZ: "Europe/Warsaw"
+      CURSEFORGE_FILES: |-
+        @/extras/cf-mods.txt
+      ENABLE_RCON: "TRUE"
+      RCON_PASSWORD: ${RCON_PASSWORD:?set RCON_PASSWORD in .env}
+    restart: "no"
+    stop_grace_period: 180s
+    volumes:
+      - "./data:/data"
+      - "./mods:/data/mods"
+      - "./extras:/extras:ro"
