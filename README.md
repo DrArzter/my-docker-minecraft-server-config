@@ -72,3 +72,20 @@ flag-day migration of existing local data.
 CurseForge URLs are convenient authoring inputs but are not immutable releases. Spawnpoint resolves a profile into an
 exact release containing file IDs, sizes and SHA-256 hashes. Those hashes remain the deployment truth; descriptive mod
 names and versions are metadata. Do not commit downloaded JARs or put API keys in profile files.
+
+## Build a release in AWS
+
+The **Build immutable release** GitHub Actions workflow is the production entry point. Run it manually on `main`, enter
+a profile ID and a new `MAJOR.MINOR` release number. The Action validates the repository, exchanges its GitHub OIDC
+token for short-lived AWS credentials, and starts the `spawnpoint-build-release` Standard Workflow with this exact
+commit SHA. AWS CodeBuild — not the GitHub runner — downloads the mod files, hashes them and publishes the manifest
+last. The candidate remains inert until a separate promotion operation selects it.
+
+The repository needs two Actions **variables**, populated from the Spawnpoint Terraform outputs:
+
+- `AWS_RELEASE_ROLE_ARN`
+- `AWS_BUILD_RELEASE_STATE_MACHINE_ARN`
+
+They are identifiers, not secrets. There are no long-lived AWS keys in GitHub, and the CurseForge API key stays in AWS
+Systems Manager Parameter Store. AWS accepts OIDC tokens only from this repository's `main` branch; selecting another
+ref fails before any build starts.
