@@ -35,6 +35,7 @@ jobs:
       RELEASE: ${{ inputs.release }}
       RELEASE_ROLE_ARN: ${{ vars.AWS_RELEASE_ROLE_ARN }}
       STATE_MACHINE_ARN: ${{ vars.AWS_BUILD_RELEASE_STATE_MACHINE_ARN }}
+      CONFIG_REPOSITORY_URL: https://github.com/DrArzter/my-docker-minecraft-server-config.git
 
     steps:
       - name: Check out the exact configuration commit
@@ -93,7 +94,8 @@ jobs:
               --arg profileId "${PROFILE_ID}" \
               --arg configCommit "${GITHUB_SHA}" \
               --arg release "${RELEASE}" \
-              '{profileId: $profileId, configCommit: $configCommit, release: $release}'
+              --arg configRepositoryUrl "${CONFIG_REPOSITORY_URL}" \
+              '{profileId: $profileId, configCommit: $configCommit, release: $release, configRepositoryUrl: $configRepositoryUrl}'
           })"
           execution_name="github-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
           execution_arn="$({
