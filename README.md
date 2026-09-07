@@ -81,10 +81,12 @@ token for short-lived AWS credentials, and starts the `spawnpoint-build-release`
 commit SHA. AWS CodeBuild — not the GitHub runner — downloads the mod files, hashes them and publishes the manifest
 last. The candidate remains inert until a separate promotion operation selects it.
 
-The repository needs two Actions **variables**, populated from the Spawnpoint Terraform outputs:
+The repository needs Actions **variables**, populated from the Spawnpoint Terraform outputs:
 
 - `AWS_RELEASE_ROLE_ARN`
 - `AWS_BUILD_RELEASE_STATE_MACHINE_ARN`
+- `AWS_PRESET_CATALOG_STATE_MACHINE_ARN`
+- `AWS_RELEASE_BUCKET`
 
 They are identifiers, not secrets. There are no long-lived AWS keys in GitHub, and the CurseForge API key stays in AWS
 Systems Manager Parameter Store. AWS accepts OIDC tokens only from this repository's `main` branch; selecting another
