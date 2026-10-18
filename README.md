@@ -5,6 +5,12 @@ Authoring source for several Minecraft server configurations based on
 server runtime: Minecraft version, loader, Compose configuration and the source mod list. Runtime worlds, downloaded
 JARs and secrets are deliberately not stored in Git.
 
+Publishing uses full Git history to record the last commit touching each complete
+`profiles/<id>/` directory. Both workflows call `scripts/archive-config-source.sh`;
+its deterministic archive includes `profiles/.source-revisions.json` for Spawnpoint's
+per-preset Source link. The snapshot itself remains pinned to the workflow commit.
+Run `bash scripts/test-archive-config-source.sh` to check this provenance contract.
+
 ## Profiles
 
 | ID | Gameplay | Runtime |

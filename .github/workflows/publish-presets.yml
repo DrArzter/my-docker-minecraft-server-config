@@ -8,6 +8,8 @@ on:
     paths:
       - "profiles/**"
       - ".github/workflows/publish-presets.yml"
+      - "scripts/archive-config-source.sh"
+      - "scripts/test-archive-config-source.sh"
   workflow_dispatch:
 
 permissions:
@@ -35,6 +37,8 @@ jobs:
     steps:
       - name: Check out the exact configuration commit
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
 
       - name: Validate request
         shell: bash
@@ -46,6 +50,7 @@ jobs:
           [[ -n "${BUILD_STATE_MACHINE_ARN}" ]] || { printf 'error: AWS_BUILD_RELEASE_STATE_MACHINE_ARN is missing\n' >&2; exit 1; }
           [[ -n "${RELEASE_ROLE_ARN}" ]] || { printf 'error: AWS_RELEASE_ROLE_ARN is missing\n' >&2; exit 1; }
           [[ -n "${RELEASE_BUCKET}" ]] || { printf 'error: AWS_RELEASE_BUCKET is missing\n' >&2; exit 1; }
+          bash scripts/test-archive-config-source.sh
 
       - name: Get short-lived AWS credentials through OIDC
         uses: aws-actions/configure-aws-credentials@e6de054238d6b7531b4efff3b6587d9aade6a06c # v6.2.3
@@ -59,7 +64,7 @@ jobs:
         run: |
           set -Eeuo pipefail
           source_archive="${RUNNER_TEMP}/config-source.tar.gz"
-          git archive --format=tar.gz --output="${source_archive}" "${GITHUB_SHA}" profiles
+          bash scripts/archive-config-source.sh "${GITHUB_SHA}" "${source_archive}"
           source_sha256="$(sha256sum -- "${source_archive}" | awk '{print $1}')"
           source_key="config-sources/${GITHUB_REPOSITORY}/${GITHUB_SHA}.tar.gz"
           if ! aws s3api put-object \
