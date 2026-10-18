@@ -2,5 +2,10 @@
   "schema_version": 1,
   "project_id": 466901,
   "file_id": 9184727,
-  "server_pack_file_id": 9184730
+  "server_pack_file_id": 9184730,
+  "client_mirror": {
+    "url": "https://cdn.modrinth.com/data/EGs3lC8D/versions/2G7ZIhYO/Prominence%E2%84%A2%20II%20Hasturian%20Era%20v4.1.4.mrpack",
+    "sha512": "e2808db25fcdd6de8b60a40bb9b79d38b163e9e6dfac3371c100ebac729457212b4e8d3d9f8840147a52b581b9626a7d26136ab05bb44ec323a495225d4c8c6c",
+    "bytes": 424584605
+  }
 }

@@ -92,7 +92,11 @@ while IFS= read -r profile; do
   if [[ -n "${mods_source}" && "${mods_resolver}" == curseforge-modpack ]]; then
     jq -e '
       .schema_version == 1 and
-      all(.project_id,.file_id,.server_pack_file_id; type == "number" and floor == . and . > 0)
+      all(.project_id,.file_id,.server_pack_file_id; type == "number" and floor == . and . > 0) and
+      ((has("client_mirror") | not) or (
+        (.client_mirror.url | type == "string" and startswith("https://")) and
+        (.client_mirror | .sha512 | type == "string" and test("^[0-9a-f]{128}$")) and
+        (.client_mirror.bytes | type == "number" and floor == . and . > 0)))
     ' "${profile_directory}/${mods_source}" >/dev/null
     jq -e '.services.mc.environment | has("CURSEFORGE_FILES") | not' <<<"${rendered}" >/dev/null
   elif [[ -n "${mods_source}" ]]; then

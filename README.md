@@ -81,6 +81,8 @@ Spawnpoint resolves the whole client assembly, including configs, resource packs
 author overrides. The resulting `client.zip` imports into a CurseForge-compatible launcher; its `overrides/` folder
 contains the complete pack-specific game directory. The launcher installs Minecraft and Fabric from the pinned
 versions. Every upstream dependency must resolve and verify before the release is published.
+The source also pins the author's official Modrinth archive by SHA-512 and size. It supplies byte-identical client
+files whose standalone CurseForge API downloads are disabled; their CurseForge hashes and sizes still have to match.
 
 The profile's Compose file expects the resolved server payload under `data/`; it does not download this modpack on
 container start. Production materializes and reconciles that payload through Spawnpoint. Its local Compose example
