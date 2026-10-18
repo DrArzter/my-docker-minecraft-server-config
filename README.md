@@ -11,6 +11,7 @@ JARs and secrets are deliberately not stored in Git.
 | --- | --- | --- |
 | `main` | Current modded server | Minecraft 1.20.1, Forge 47.4.10, CurseForge source list |
 | `vanilla-forge` | Vanilla-like, no mods | Minecraft 1.20.1 on Forge 47.4.10 |
+| `prominence` | Prominence II: Hasturian Era 4.1.4 | Minecraft 1.20.1, Fabric 0.19.3, pinned CurseForge client/server pack |
 
 Vanilla gameplay does not require the vanilla loader. Keeping Forge with an empty mod directory is a valid profile and
 makes later addition of server-only utility mods possible without changing the world's runtime family.
@@ -74,6 +75,17 @@ exact release containing file IDs, sizes and SHA-256 hashes. Those hashes remain
 names and versions are metadata. Do not commit downloaded JARs or put API keys in profile files.
 
 ## Build a release in AWS
+
+The `prominence` profile pins CurseForge project `466901`, client file `9184727` and server file `9184730`.
+Spawnpoint resolves the whole client assembly, including configs, resource packs, shader packs, datapacks and all
+author overrides. The resulting `client.zip` imports into a CurseForge-compatible launcher; its `overrides/` folder
+contains the complete pack-specific game directory. The launcher installs Minecraft and Fabric from the pinned
+versions. Every upstream dependency must resolve and verify before the release is published.
+
+The profile's Compose file expects the resolved server payload under `data/`; it does not download this modpack on
+container start. Production materializes and reconciles that payload through Spawnpoint. Its local Compose example
+uses an 8 GiB heap; choose a world footprint with additional room for JVM/native memory before starting it on a fleet
+host. Building a release does not start a world.
 
 The **Build immutable release** GitHub Actions workflow is the production entry point. Run it manually on `main`, enter
 a profile ID and a new `MAJOR.MINOR` release number. The Action validates the repository, exchanges its GitHub OIDC
