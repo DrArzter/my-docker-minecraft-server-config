@@ -1,0 +1,22 @@
+# Run against the server payload materialized by Spawnpoint's release builder.
+services:
+  mc:
+    image: itzg/minecraft-server@sha256:7423a4cf59ec510a58294f853fc7b07cdf0a50c5bc4618ee172327d7913941eb
+    tty: true
+    stdin_open: true
+    ports:
+      - "25565:25565"
+    environment:
+      EULA: "TRUE"
+      TYPE: "FABRIC"
+      VERSION: "1.20.1"
+      FABRIC_LOADER_VERSION: "0.19.3"
+      MEMORY: "8192M"
+      ONLINE_MODE: "true"
+      TZ: "Europe/Warsaw"
+      ENABLE_RCON: "TRUE"
+      RCON_PASSWORD: ${RCON_PASSWORD:?set RCON_PASSWORD in .env}
+    restart: "no"
+    stop_grace_period: 180s
+    volumes:
+      - "./data:/data"

@@ -46,6 +46,11 @@ while IFS= read -r profile; do
   }
 
   mods_source="$(jq -r '.mods.source // empty' "${profile}")"
+  mods_resolver="$(jq -r '.mods.resolver // "curseforge-files"' "${profile}")"
+  [[ "${mods_resolver}" == curseforge-files || "${mods_resolver}" == curseforge-modpack ]] || {
+    printf 'error: unsupported resolver for %s\n' "${profile_id}" >&2
+    exit 1
+  }
   if [[ -n "${mods_source}" ]]; then
     [[ -f "${profile_directory}/${mods_source}" ]] || {
       printf 'error: missing mod source for %s: %s\n' "${profile_id}" "${mods_source}" >&2
@@ -79,8 +84,22 @@ while IFS= read -r profile; do
       '.services.mc.environment.FORGE_VERSION == $loader_version' \
       <<<"${rendered}" >/dev/null
   fi
+  if [[ "${loader_type}" == "FABRIC" && -n "${loader_version}" ]]; then
+    jq -e --arg loader_version "${loader_version}" \
+      '.services.mc.environment.FABRIC_LOADER_VERSION == $loader_version' <<<"${rendered}" >/dev/null
+  fi
 
-  if [[ -n "${mods_source}" ]]; then
+  if [[ -n "${mods_source}" && "${mods_resolver}" == curseforge-modpack ]]; then
+    jq -e '
+      .schema_version == 1 and
+      all(.project_id,.file_id,.server_pack_file_id; type == "number" and floor == . and . > 0) and
+      ((has("client_mirror") | not) or (
+        (.client_mirror.url | type == "string" and startswith("https://")) and
+        (.client_mirror | .sha512 | type == "string" and test("^[0-9a-f]{128}$")) and
+        (.client_mirror.bytes | type == "number" and floor == . and . > 0)))
+    ' "${profile_directory}/${mods_source}" >/dev/null
+    jq -e '.services.mc.environment | has("CURSEFORGE_FILES") | not' <<<"${rendered}" >/dev/null
+  elif [[ -n "${mods_source}" ]]; then
     jq -e --arg expected_mod_source "@/${mods_source}" '
       .services.mc.environment.CURSEFORGE_FILES == $expected_mod_source
       and any(.services.mc.volumes[]; .target == "/extras" and .read_only == true)
