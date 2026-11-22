@@ -1,0 +1,51 @@
+name: Release pin diff
+
+# Shows in the job summary which release pins a pull request changes. It runs
+# on pull_request, not pull_request_target: the token is read-only, no secret
+# and no AWS role is available, and the profile files are read only as data.
+on:
+  pull_request:
+    paths:
+      - "profiles/**"
+      - "scripts/pin-diff.sh"
+      - "scripts/test-pin-diff.sh"
+      - ".github/workflows/release-pin-diff.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release-pin-diff-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  pin-diff:
+    name: Compare release pins
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+
+    steps:
+      - name: Check out the pull request
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Write the pin diff to the job summary
+        shell: bash
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          set -Eeuo pipefail
+          [[ "${BASE_SHA}" =~ ^[0-9a-f]{40}$ && "${HEAD_SHA}" =~ ^[0-9a-f]{40}$ ]] || {
+            printf 'error: the pull request has no full base and head commit SHA\n' >&2
+            exit 1
+          }
+          bash scripts/test-pin-diff.sh
+          for side in base head; do
+            sha_variable="${side^^}_SHA"
+            mkdir -p -- "${RUNNER_TEMP}/${side}"
+            git archive "${!sha_variable}" profiles | tar -x -C "${RUNNER_TEMP}/${side}"
+          done
+          bash scripts/pin-diff.sh "${RUNNER_TEMP}/base" "${RUNNER_TEMP}/head" | tee -a "${GITHUB_STEP_SUMMARY}"

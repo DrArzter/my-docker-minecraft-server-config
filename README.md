@@ -111,3 +111,11 @@ The repository needs Actions **variables**, populated from the Spawnpoint Terraf
 They are identifiers, not secrets. There are no long-lived AWS keys in GitHub, and the CurseForge API key stays in AWS
 Systems Manager Parameter Store. AWS accepts OIDC tokens only from this repository's `main` branch; selecting another
 ref fails before any build starts.
+
+## Pin diff in a pull request
+
+The **Release pin diff** workflow runs on every pull request that touches `profiles/`. It writes to the job summary
+which release pins each modpack profile changes: the modpack file and server pack ids, the client mirror, and addons
+added, removed and changed. It reads the profile files as data, with a read-only token, no secret and no AWS role.
+The full release plan is in the build log, `plan.json` and the panel. Run `bash scripts/test-pin-diff.sh` to check the
+diff.
