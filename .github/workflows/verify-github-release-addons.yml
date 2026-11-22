@@ -1,0 +1,40 @@
+name: Verify GitHub release addons
+
+# Checks each github_release addon pin against GitHub before it can reach a
+# build. It runs on pull_request, not pull_request_target: the token is
+# read-only, no secret and no AWS role is available.
+on:
+  pull_request:
+    paths:
+      - "profiles/**/addons.json"
+      - "scripts/verify-github-release-addons.sh"
+      - ".github/workflows/verify-github-release-addons.yml"
+  push:
+    branches: [main]
+    paths:
+      - "profiles/**/addons.json"
+
+permissions:
+  contents: read
+  attestations: read
+
+concurrency:
+  group: verify-github-release-addons-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    name: Verify release, digests and provenance
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+
+    steps:
+      - name: Check out the configuration
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Verify every github_release pin
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: scripts/verify-github-release-addons.sh
