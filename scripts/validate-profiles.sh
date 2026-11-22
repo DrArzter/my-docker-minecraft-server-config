@@ -90,8 +90,9 @@ while IFS= read -r profile; do
   fi
 
   # Addons (ADR-0077) pin extra mods on top of the pack, one exact file each.
-  # Only a modpack preset may carry them, and only Modrinth or CurseForge may
-  # serve them: the point of a pin is that nothing else can be substituted.
+  # Only a modpack preset may carry them. Modrinth, CurseForge or an
+  # allow-listed GitHub release (ADR-0079) may serve them: the point of a pin
+  # is that nothing else can be substituted. The allow-list lives in Spawnpoint.
   mods_addons="$(jq -r '.mods.addons // empty' "${profile}")"
   if [[ -n "${mods_addons}" ]]; then
     [[ "${mods_resolver}" == curseforge-modpack ]] || {
@@ -116,7 +117,16 @@ while IFS= read -r profile; do
           (.modrinth.bytes | type == "number" and floor == . and . > 0))) and
          ((has("curseforge") | not) or (
           all(.curseforge.project_id, .curseforge.file_id; type == "number" and floor == . and . > 0))) and
-         ((has("modrinth") or has("curseforge")) and ((has("modrinth") and has("curseforge")) | not))))
+         ((has("github_release") | not) or (
+          (.github_release | keys - ["repository","tag","asset","commit","sha512","bytes","workflow"] | length == 0) and
+          (.github_release.repository | type == "string" and test("^[A-Za-z0-9][A-Za-z0-9-]{0,38}/[A-Za-z0-9._-]{1,100}$")) and
+          (.github_release.tag | type == "string" and test("^[A-Za-z0-9][A-Za-z0-9._+-]*$")) and
+          (.github_release.asset | type == "string" and test("^[A-Za-z0-9][A-Za-z0-9._+-]*\\.jar$")) and
+          (.github_release.commit | type == "string" and test("^[0-9a-f]{40}$")) and
+          (.github_release.sha512 | type == "string" and test("^[0-9a-f]{128}$")) and
+          (.github_release.bytes | type == "number" and floor == . and . > 0) and
+          (.github_release.workflow | type == "string" and test("^\\.github/workflows/[A-Za-z0-9._-]+\\.ya?ml$")))) and
+         ([has("modrinth"), has("curseforge"), has("github_release")] | map(select(.)) | length == 1)))
     ' "${profile_directory}/${mods_addons}" >/dev/null || {
       printf 'error: invalid addons list for %s: %s\n' "${profile_id}" "${mods_addons}" >&2
       exit 1
