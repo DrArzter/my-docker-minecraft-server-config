@@ -6,27 +6,29 @@
       "side": "both",
       "github_release": {
         "repository": "DrArzter/SophisticatedBackpacks",
-        "tag": "v1.20.1-3.23.4.5+sp.1",
-        "asset": "sophisticatedbackpacks-1.20.1-3.23.4.5+sp.1.jar",
-        "commit": "1cd9d417c98c87135d9c8bc074b980ab0cc07434",
-        "sha512": "12f4e7c83215612ff2bc24665b434b071c480f6e01d4d24022de3d2130208167721ff0c1fb526f1144661ce670e4d3d9c829fda1eed0c0b86c9983bcbcd382c5",
-        "bytes": 992206,
+        "tag": "v1.20.1-3.23.4.5+sp.4",
+        "asset": "sophisticatedbackpacks-1.20.1-3.23.4.5+sp.4.jar",
+        "commit": "9c983e9cd606f86838eef068b06303021cde9055",
+        "sha512": "eb351d9165b6b7cb5bbed80295381fd867b88995c71ddf728ab3603aebad739aa512dd627ccdab5580b5bd51681490590d61d17c380979df63887e5d0201c673",
+        "bytes": 995686,
         "workflow": ".github/workflows/build.yml"
       }
     },
     {
-      "name": "Sophisticated Core (unofficial Fabric port)",
+      "name": "Sophisticated Core (sp fork: Forge 1.20.1 backports)",
       "side": "both",
+      "github_release": {
+        "repository": "DrArzter/SophisticatedCore",
+        "tag": "v1.20.1-1.2.7.15.166+sp.1",
+        "asset": "sophisticatedcore-1.20.1-1.2.7.15.166+sp.1.jar",
+        "commit": "af8bd272da71c2dafb059c9055eceea113270c3a",
+        "sha512": "eea07fc7737eee2d2830f66fc5a80157303e025175c8344571518e12d92308f96eaed51cab2a5a30a4eba7a6fa20eff1267a31846c5ae4048fe025d020c0a7e9",
+        "bytes": 2863184,
+        "workflow": ".github/workflows/build.yml"
+      },
       "required_by": [
         "Sophisticated Backpacks (sp fork: Accessories support)"
-      ],
-      "modrinth": {
-        "project_id": "9jxwkYQL",
-        "version_id": "BP3CQI2v",
-        "file": "sophisticatedcore-1.20.1-1.2.7.15.166.jar",
-        "sha512": "892dda2bfa2a49ed66e869877fc6309cfc3af11fe61859c3b1be341baf689a693fda30902dec5c9ec6f737fd8fe451615ceb3d1c31c51e40c38e68b59dfcf134",
-        "bytes": 2858683
-      }
+      ]
     }
   ]
 }

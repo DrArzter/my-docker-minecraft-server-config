@@ -91,8 +91,9 @@ while IFS= read -r profile; do
 
   # Addons (ADR-0077) pin extra mods on top of the pack, one exact file each.
   # Only a modpack preset may carry them. Modrinth, CurseForge or an
-  # allow-listed GitHub release (ADR-0079) may serve them: the point of a pin
-  # is that nothing else can be substituted. The allow-list lives in Spawnpoint.
+  # GitHub release (ADR-0079) may serve them: the point of a pin is that
+  # nothing else can be substituted. A GitHub pin is verified by its own CI
+  # workflow (immutable release, digests, build attestation) before a merge.
   mods_addons="$(jq -r '.mods.addons // empty' "${profile}")"
   if [[ -n "${mods_addons}" ]]; then
     [[ "${mods_resolver}" == curseforge-modpack ]] || {
