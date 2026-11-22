@@ -9,6 +9,7 @@
   "compose_file": "compose.yaml",
   "mods": {
     "source": "extras/curseforge-modpack.json",
-    "resolver": "curseforge-modpack"
+    "resolver": "curseforge-modpack",
+    "addons": "extras/addons.json"
   }
 }

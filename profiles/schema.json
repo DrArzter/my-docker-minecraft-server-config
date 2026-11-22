@@ -36,7 +36,8 @@
       "required": ["source"],
       "properties": {
         "source": { "type": ["string", "null"] },
-        "resolver": { "enum": ["curseforge-files", "curseforge-modpack"] }
+        "resolver": { "enum": ["curseforge-files", "curseforge-modpack"] },
+        "addons": { "type": "string", "minLength": 1 }
       }
     }
   }
