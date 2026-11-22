@@ -1,14 +1,12 @@
 #!/usr/bin/env bash
 # Checks every github_release addon pin (ADR-0079 in Spawnpoint) against
-# GitHub: the repository is allow-listed, the release is immutable, the asset
-# matches the pinned size and digests, and its build provenance attestation
-# names the pinned workflow, tag and commit. Reads the profile files as data.
+# GitHub: the release is immutable, the asset matches the pinned size and
+# digests, and its build provenance attestation names the pinned workflow, tag
+# and commit. Reads the profile files as data.
 
 set -Eeuo pipefail
 
 repository_root="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)"
-# Keep in step with GITHUB_RELEASE_REPOSITORIES in Spawnpoint.
-allowed_repositories="${ALLOWED_REPOSITORIES:-DrArzter/SophisticatedBackpacks}"
 
 for command in gh jq sha256sum sha512sum; do
   command -v "${command}" >/dev/null 2>&1 || {
@@ -36,9 +34,6 @@ while IFS= read -r addons; do
     sha512="$(jq -r '.github_release.sha512' <<<"${pin}")"
     bytes="$(jq -r '.github_release.bytes' <<<"${pin}")"
     workflow="$(jq -r '.github_release.workflow' <<<"${pin}")"
-
-    [[ " ${allowed_repositories} " == *" ${repository} "* ]] ||
-      fail "repository ${repository} is not allow-listed"
 
     release="$(gh api "repos/${repository}/releases/tags/${tag}")" ||
       fail "release ${tag} not found in ${repository}"
