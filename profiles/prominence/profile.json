@@ -7,6 +7,7 @@
   "minecraft_version": "1.20.1",
   "loader": { "type": "fabric", "version": "0.19.3" },
   "compose_file": "compose.yaml",
+  "footprint": { "memory_mib": 12288, "cores": 1.5 },
   "mods": {
     "source": "extras/curseforge-modpack.json",
     "resolver": "curseforge-modpack",
