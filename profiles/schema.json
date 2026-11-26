@@ -30,6 +30,16 @@
       }
     },
     "compose_file": { "const": "compose.yaml" },
+    "footprint": {
+      "description": "What a session of this preset needs from a launched host, when the game's footprint is not enough. Spawnpoint adds the host reserve (1024 MiB, 0.5 core) and rounds vCPUs up.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["memory_mib", "cores"],
+      "properties": {
+        "memory_mib": { "type": "integer", "minimum": 1 },
+        "cores": { "type": "number", "exclusiveMinimum": 0 }
+      }
+    },
     "mods": {
       "type": "object",
       "additionalProperties": false,
